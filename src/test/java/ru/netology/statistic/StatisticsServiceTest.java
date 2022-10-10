@@ -17,4 +17,14 @@ public class StatisticsServiceTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    void findMaxMidl() {
+        StatisticsService service = new StatisticsService();
+        long[] incomesInBillions = {0, 0, 2, 0};
+        long expected = 2;
+        long actual = service.findMax(incomesInBillions);
+
+        assertEquals(expected, actual);
+    }
 }
